@@ -32,7 +32,9 @@ public class CameraController : MonoBehaviour
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 80f);
+        //Obracamy naszą kamerą góra/dół
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        //Obracamy całym graczem dookoła osi Z
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }
